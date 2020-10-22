@@ -16,10 +16,10 @@ searchUser.addEventListener('keyup', (e)=>{
         .then( (response) => {
             //Send user alert if entered user is not found
             if(isNaN(response))  {
-                //Show profile in the DOM
-                ui.showProfile(response.profile);
                 //clear error
                 ui.clearError();
+                //Show profile in the DOM
+                ui.showProfile(response.profile); 
             }
             else if (response === 404){
                 //the second parameter is a bootstrap class
